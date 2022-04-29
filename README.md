@@ -22,3 +22,5 @@ Runs prettier to format code. In VS Code you can set `Format on save` in setting
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
+
+test rules
