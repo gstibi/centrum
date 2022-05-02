@@ -2,18 +2,21 @@ import React from 'react';
 import './App.css';
 import { Container } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
+import { StyledEngineProvider } from '@mui/material/styles';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Home from './routes/Home';
 import Section1 from './routes/Section1';
 
 const App = () => (
-  <Container>
+  <StyledEngineProvider>
     <BrowserRouter>
       <ResponsiveAppBar />
       <Home />
-      <Section1 />
+      <Container>
+        <Section1 />
+      </Container>
     </BrowserRouter>
-  </Container>
+  </StyledEngineProvider>
 );
 
 export default App;
