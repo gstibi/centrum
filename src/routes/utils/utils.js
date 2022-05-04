@@ -8,3 +8,9 @@ export const scrollToElement = target => {
   // eslint-disable-next-line no-unused-expressions
   window.scrollTo({ behavior: 'smooth', top: elementOffsetPosition });
 };
+
+export const getRoutesAndIds = () => [
+  { name: 'Úvod', id: 'home' },
+  { name: 'Prečo centrum', id: 'preco' },
+  { name: 'Detaily stavby', id: 'detail' },
+];
