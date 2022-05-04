@@ -9,7 +9,8 @@ import {
 } from '@mui/material/styles';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Home from './routes/Home';
-import Section1 from './routes/Section1';
+import Preco from './routes/Preco';
+import Detail from './routes/Detail';
 
 const theme = createTheme({
   palette: {
@@ -29,7 +30,8 @@ const App = () => (
         <ResponsiveAppBar />
         <Home />
         <Container>
-          <Section1 />
+          <Preco />
+          <Detail />
         </Container>
       </BrowserRouter>
     </StyledEngineProvider>

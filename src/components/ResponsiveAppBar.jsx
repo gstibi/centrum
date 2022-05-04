@@ -13,12 +13,9 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
-import { scrollToElement } from '../routes/utils/utils';
+import { scrollToElement, getRoutesAndIds } from '../routes/utils/utils';
 
-const pages = [
-  { name: 'Úvod', id: 'home' },
-  { name: 'Prečo centrum', id: 'section1' },
-];
+const pages = getRoutesAndIds();
 
 const useStyles = makeStyles(() => ({
   link: { textDecoration: 'none' },
