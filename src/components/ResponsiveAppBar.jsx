@@ -13,14 +13,15 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
+import { scrollToElement } from '../routes/utils/utils';
 
 const pages = [
-  { name: 'Home', id: 'home' },
-  { name: 'Section1', id: 'section1' },
+  { name: 'Úvod', id: 'home' },
+  { name: 'Prečo centrum', id: 'section1' },
 ];
 
 const useStyles = makeStyles(() => ({
-  test: { color: 'red' },
+  link: { textDecoration: 'none' },
 }));
 
 const ResponsiveAppBar = () => {
@@ -38,13 +39,11 @@ const ResponsiveAppBar = () => {
   useEffect(() => {
     const url = window.location.href.split('/');
     const target = url[url.length - 1].toLowerCase();
-    const element = document.getElementById(target);
-    // eslint-disable-next-line no-unused-expressions
-    element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToElement(target === '' ? 'home' : target);
   }, []);
 
   return (
-    <>
+    <div id="app-bar">
       <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -53,12 +52,16 @@ const ResponsiveAppBar = () => {
               noWrap
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-              className={classes.test}
             >
               LOGO
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: 'flex', md: 'none' },
+              }}
+            >
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -92,12 +95,9 @@ const ResponsiveAppBar = () => {
                     <Link
                       to={`/${id}`}
                       onClick={() => {
-                        const hero = document.getElementById(id);
-                        hero.scrollIntoView({
-                          behavior: 'smooth',
-                          block: 'start',
-                        });
+                        scrollToElement(id);
                       }}
+                      className={classes.link}
                     >
                       {name}
                     </Link>
@@ -113,14 +113,20 @@ const ResponsiveAppBar = () => {
             >
               LOGO
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: 'none', md: 'flex' },
+                justifyContent: 'center',
+              }}
+            >
               {pages.map(({ name, id }) => (
                 <Link
                   to={`/${id}`}
                   onClick={() => {
-                    const hero = document.getElementById(id);
-                    hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    scrollToElement(id);
                   }}
+                  className={classes.link}
                 >
                   <Button
                     key={id}
@@ -136,7 +142,7 @@ const ResponsiveAppBar = () => {
         </Container>
       </AppBar>
       <Toolbar />
-    </>
+    </div>
   );
 };
 export default ResponsiveAppBar;
