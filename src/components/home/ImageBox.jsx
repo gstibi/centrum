@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const ImageBox = ({ left, top, width, height, variants, source }) => (
+const ImageBox = ({ width, height, variants, source }) => (
   <motion.div variants={variants}>
     <Box
       component="img"
@@ -11,20 +11,17 @@ const ImageBox = ({ left, top, width, height, variants, source }) => (
       alt="mladi"
       sx={{
         objectFit: 'cover',
-        position: 'absolute',
-        transformOrigin: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         borderRadius: 2,
         boxShadow: 4,
-        left,
-        top,
         width,
         height,
-        transition: 'transform .6s',
+        maxHeight: '100%',
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        transition: 'transform 1.2s',
         '&:hover': {
-          transform: 'scale(1.05)',
+          transform: 'scale(1.02)',
         },
       }}
     />
@@ -32,8 +29,6 @@ const ImageBox = ({ left, top, width, height, variants, source }) => (
 );
 
 ImageBox.propTypes = {
-  left: PropTypes.string,
-  top: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   variants: PropTypes.shape(),
@@ -41,8 +36,6 @@ ImageBox.propTypes = {
 };
 
 ImageBox.defaultProps = {
-  left: null,
-  top: null,
   width: null,
   height: null,
   variants: null,

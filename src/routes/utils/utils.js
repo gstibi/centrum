@@ -9,8 +9,12 @@ export const scrollToElement = target => {
   window.scrollTo({ behavior: 'smooth', top: elementOffsetPosition });
 };
 
-export const getRoutesAndIds = () => [
-  { name: 'Úvod', id: 'home' },
-  { name: 'Prečo centrum', id: 'preco' },
-  { name: 'Detaily stavby', id: 'detail' },
-];
+export const getRoutesAndIds = () => {
+  const routes = [
+    { name: 'Úvod', id: 'home' },
+    { name: 'Prečo centrum', id: 'preco' },
+    { name: 'Detaily stavby', id: 'detail' },
+  ];
+
+  return routes.map(route => ({ ...route, url: `/${route.id}` }));
+};
