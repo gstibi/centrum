@@ -1,49 +1,74 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Box } from '@mui/material';
 import React from 'react';
+import NazovSekcie from '../components/NazovSekcie';
+import Popis from '../components/detail/Popis';
+import prizemie from '../assets/images/podorys-prizemie.webp';
+import poschodie from '../assets/images/podorys-poschodie.webp';
 
-const Preco = () => (
-  <Grid id="detail" container sx={{ padding: '3%' }} spacing={10}>
-    <Grid item xs={12} sm={6}>
-      <Typography variant="h3" color="primary">
-        Detaily stavby
-      </Typography>
+const details = [
+  {
+    id: 1,
+    nadpis: 'Prednášková miestnosť',
+    body: [
+      'Pódium',
+      'Sedenie pre 240 ľudí',
+      'Ozvučenie a osvetlenie',
+      'Malá kaplnka na poschodí',
+    ],
+    farba: '#AE3636',
+  },
+  {
+    id: 2,
+    nadpis: 'Ubytovanie',
+    body: [
+      '20 lôžok na poschodí',
+      '4 lôžka na prízemí s bezbarierovým prístupom',
+    ],
+    farba: '#79AE36',
+  },
+  {
+    id: 3,
+    nadpis: 'Sociálne zariadenia',
+    body: ['Na prízemí s bezbarierovým prístupom'],
+    farba: '#CEAF40',
+  },
+  {
+    id: 4,
+    nadpis: 'Technické zabezpečenie',
+    body: ['Recepcia', 'Skladové priestory', 'Technická miestnosť'],
+    farba: '#3836AE',
+  },
+];
+
+const Detail = () => (
+  <>
+    <NazovSekcie nazov="Detaily stavby" />
+    <Grid id="detail" container sx={{ padding: '3%' }}>
+      <Grid item xs={12} sm={4}>
+        <Box
+          component="img"
+          src={prizemie}
+          alt="podorys prizemie"
+          sx={{ objectFit: 'cover', width: '100%' }}
+        />
+      </Grid>
+      <Grid item container xs={12} sm={4} sx={{ padding: '5%' }}>
+        {details.map(detail => (
+          <Grid item xs={12}>
+            <Popis {...detail} />
+          </Grid>
+        ))}
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box
+          component="img"
+          src={poschodie}
+          alt="podorys prizemie"
+          sx={{ objectFit: 'cover', width: '100%' }}
+        />
+      </Grid>
     </Grid>
-    <Grid item xs={12} sm={6}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
-      justo convallis, rutrum tellus sed, euismod metus. Duis mi nibh, ultrices
-      quis lobortis nec, volutpat et neque. Sed imperdiet ante sit amet ipsum
-      imperdiet ullamcorper. Sed vehicula odio libero, sit amet pharetra sem
-      sodales vitae. Phasellus sit amet ex dapibus, fermentum dolor quis,
-      consectetur urna. Suspendisse imperdiet neque justo, sed iaculis nisl
-      varius ac. Fusce at ligula in lectus semper faucibus. Nulla sagittis, nisi
-      id feugiat eleifend, est augue mollis leo, ut euismod nunc purus id quam.
-      Curabitur volutpat turpis non ipsum lobortis scelerisque. Nulla dolor
-      purus, bibendum et lectus id, commodo accumsan metus. Praesent id tortor
-      nec elit fringilla bibendum. Integer consectetur varius justo, quis
-      consectetur ex pretium ac. In id convallis dui. Integer aliquet luctus
-      metus sit amet efficitur. Ut ullamcorper sagittis dolor, quis varius
-      ligula hendrerit quis. Vivamus bibendum vehicula neque id placerat. Etiam
-      aliquam nunc facilisis libero feugiat, non egestas sapien euismod. Ut ut
-      congue ligula, id sollicitudin arcu. Maecenas ac metus id diam rutrum
-      mattis. In molestie aliquet risus, blandit convallis diam accumsan id.
-      Vestibulum consectetur libero in lectus volutpat hendrerit. Vestibulum
-      eleifend quam vitae nisl dignissim fringilla. Maecenas pulvinar est ac
-      nisi ultricies, vitae finibus metus fringilla. Morbi eleifend magna non
-      facilisis elementum. Cras ornare quis dui vel bibendum. Cras nec augue sit
-      amet nunc viverra aliquet et id augue. Aliquam pulvinar semper velit at
-      malesuada. Morbi a magna nisi. Fusce vel ex a nibh euismod accumsan. Duis
-      vitae scelerisque massa. Praesent orci lorem, pretium sit amet consequat
-      sed, eleifend vel tellus. Nulla congue at lorem eget gravida. Vestibulum
-      elementum convallis leo. Pellentesque euismod, lacus mollis pulvinar
-      sollicitudin, tellus arcu sodales erat, quis iaculis dolor mi nec enim.
-      Integer vestibulum placerat nisl, in finibus elit dignissim vel. Aliquam a
-      molestie neque. Nunc semper id mauris sit amet posuere. Quisque pretium
-      luctus erat sit amet feugiat. Duis in nunc id enim ultrices pharetra at
-      blandit tortor. Nulla commodo blandit mi, id euismod diam rutrum sed. Duis
-      sagittis nisi in ultricies rhoncus. Integer eu urna vel ex dictum
-      porttitor.
-    </Grid>
-  </Grid>
+  </>
 );
 
-export default Preco;
+export default Detail;
