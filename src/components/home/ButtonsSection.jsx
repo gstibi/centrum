@@ -23,7 +23,7 @@ const ButtonsSection = () => {
         display: 'flex',
         marginTop: '1%',
         marginBottom: '1%',
-        paddingBottom: '1%',
+        padding: '1% 2%',
       }}
     >
       <Grid item xs={12} sm={3}>
@@ -37,7 +37,7 @@ const ButtonsSection = () => {
           </Button>
         </Link>
       </Grid>
-      <Grid item xs={12} sm={3} justifyContent="center">
+      <Grid item xs={12} sm={3}>
         <Link
           to={pages[1].url}
           className={classes.link}

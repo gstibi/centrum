@@ -41,9 +41,9 @@ const details = [
 ];
 
 const Detail = () => (
-  <>
+  <Box id="detail">
     <NazovSekcie nazov="Detaily stavby" />
-    <Grid id="detail" container sx={{ padding: '3%' }}>
+    <Grid container sx={{ padding: '3%' }}>
       <Grid item xs={12} sm={4}>
         <Box
           component="img"
@@ -68,7 +68,7 @@ const Detail = () => (
         />
       </Grid>
     </Grid>
-  </>
+  </Box>
 );
 
 export default Detail;
