@@ -10,9 +10,9 @@ import {
 import React from 'react';
 import NazovSekcie from '../components/NazovSekcie';
 import qrKod from '../assets/images/qrKod.webp';
-import tehlicka1 from '../assets/images/20€tehlička_1.webp';
-import tehlicka3 from '../assets/images/100€tehlička_1.webp';
-import tehlicka2 from '../assets/images/200€budujeme-základy_1.webp';
+import tehlicka1 from '../assets/images/20€tehlicka1.webp';
+import tehlicka3 from '../assets/images/100€tehlicka1.webp';
+import tehlicka2 from '../assets/images/200€zaklady1.webp';
 
 const Pomoc = () => (
   <Box id="pomoc">
