@@ -11,6 +11,8 @@ import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Home from './routes/Home';
 import Preco from './routes/Preco';
 import Detail from './routes/Detail';
+import Pomoc from './routes/Pomoc';
+import Aktuality from './routes/Aktuality';
 
 const theme = createTheme({
   palette: {
@@ -32,6 +34,8 @@ const App = () => (
         <Container>
           <Preco />
           <Detail />
+          <Pomoc />
+          <Aktuality />
         </Container>
       </BrowserRouter>
     </StyledEngineProvider>

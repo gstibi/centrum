@@ -24,7 +24,8 @@
     "object-curly-newline": "off",
     "operator-linebreak": "off",
     "import/prefer-default-export": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "no-unused-vars": "warn"
   },
   "ignorePatterns": ["node_modules/"]
 }

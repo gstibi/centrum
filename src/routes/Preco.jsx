@@ -1,31 +1,38 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import React from 'react';
 import NazovSekcie from '../components/NazovSekcie';
 
 const Preco = () => (
-  <>
+  <Box id="preco">
     <NazovSekcie nazov="Preco staviame centrum" />
-    <Grid id="preco" container spacing={10}>
+    <Grid container spacing={10}>
       <Grid item xs={12} sm={6}>
         <Typography variant="body1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
-          justo convallis, rutrum tellus sed, euismod metus. Duis mi nibh,
-          ultrices quis lobortis nec, volutpat et neque. Sed imperdiet ante sit
-          amet ipsum imperdiet ullamcorper. Sed vehicula odio libero, sit amet
-          pharetra sem sodales vitae. Phasellus sit amet ex dapibus, fermentum
-          dolor quis, consectetur urna. Suspendisse imperdiet neque justo, sed
-          iaculis nisl varius ac. Fusce at ligula in lectus semper faucibus.
-          Nulla sagittis, nisi id feugiat eleifend, est augue mollis leo, ut
-          euismod nunc purus id quam. Curabitur volutpat turpis non ipsum
-          lobortis scelerisque. Nulla dolor purus, bibendum et lectus id,
-          commodo accumsan metus.
+          Pastoračné centrum Anny Kolesárovej – DOMČEK sa nachádza v rodisku
+          blahoslavenej Anky Kolesárovej vo Vysokej nad Uhom. Malá obec na
+          východnom Slovensku, v okrese Michalovce, sa po Ankinom blahorečení v
+          roku 2018 stala vyhľadávaným pútnickým miestom. Pôvodný Domček je už
+          príliš malý, preto sme sa rozhodli postaviť úplne nové CENTRUM PRE
+          MLÁDEŽ, ktoré naplní aktuálne potreby prijímania väčšieho množstva
+          pútnikov a duchovné aktivity spoločenstiev. Stavbu bude tvoriť jedna
+          dvojpodlažná a jedna jednopodlažná budova a stáť bude hneď vedľa
+          pôvodného Domčeka. Jej súčasťou bude spoločenská miestnosť s kapacitou
+          240 ľudí.
         </Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
-        obrazok
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ddKoIkNAO4c"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </Grid>
     </Grid>
-  </>
+  </Box>
 );
 
 export default Preco;
