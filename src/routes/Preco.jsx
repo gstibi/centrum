@@ -4,7 +4,7 @@ import NazovSekcie from '../components/NazovSekcie';
 
 const Preco = () => (
   <Box id="preco">
-    <NazovSekcie nazov="Preco staviame centrum" />
+    <NazovSekcie nazov="Prečo staviame centrum" />
     <Grid container spacing={10}>
       <Grid item xs={12} sm={6}>
         <Typography variant="body1">
@@ -22,8 +22,8 @@ const Preco = () => (
       </Grid>
       <Grid item xs={12} sm={6}>
         <iframe
-          width="560"
-          height="315"
+          width="100%"
+          height="305"
           src="https://www.youtube.com/embed/ddKoIkNAO4c"
           title="YouTube video player"
           frameBorder="0"

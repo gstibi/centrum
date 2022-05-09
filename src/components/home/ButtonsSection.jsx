@@ -30,7 +30,7 @@ const ButtonsSection = () => {
         <Link
           to={pages[0].url}
           className={classes.link}
-          onClick={() => scrollToElement(pages[0].id)}
+          onClick={() => scrollToElement(pages[3].id)}
         >
           <Button variant="contained" fullWidth>
             Podporiť

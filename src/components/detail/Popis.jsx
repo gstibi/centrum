@@ -16,7 +16,7 @@ const Popis = ({ nadpis, body, farba }) => (
     <Typography variant="h6">{nadpis}</Typography>
     <ul>
       {body.map(bod => (
-        <li>{bod}</li>
+        <li key={bod}>{bod}</li>
       ))}
     </ul>
   </Box>
