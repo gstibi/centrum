@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import { scrollToElement, getRoutesAndIds } from '../routes/utils/utils';
+import centrum from '../assets/images/centrum_white.png';
 
 const pages = getRoutesAndIds();
 
@@ -50,7 +51,19 @@ const ResponsiveAppBar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-              LOGO
+              <Link
+                to="/home"
+                onClick={() => {
+                  scrollToElement('home');
+                }}
+                className={classes.link}
+              >
+                <img
+                  src={centrum}
+                  alt="logo"
+                  style={{ height: 40, padding: 10 }}
+                />
+              </Link>
             </Typography>
 
             <Box
@@ -96,7 +109,7 @@ const ResponsiveAppBar = () => {
                       }}
                       className={classes.link}
                     >
-                      {name}
+                      <Typography>{name}</Typography>
                     </Link>
                   </MenuItem>
                 ))}
@@ -108,7 +121,19 @@ const ResponsiveAppBar = () => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
-              LOGO
+              <Link
+                to="/home"
+                onClick={() => {
+                  scrollToElement('home');
+                }}
+                className={classes.link}
+              >
+                <img
+                  src={centrum}
+                  alt="logo"
+                  style={{ height: 40, padding: 10 }}
+                />
+              </Link>
             </Typography>
             <Box
               sx={{
@@ -119,6 +144,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map(({ name, id }) => (
                 <Link
+                  key={id}
                   to={`/${id}`}
                   onClick={() => {
                     scrollToElement(id);
@@ -130,7 +156,7 @@ const ResponsiveAppBar = () => {
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                    {name}
+                    <Typography>{name}</Typography>
                   </Button>
                 </Link>
               ))}

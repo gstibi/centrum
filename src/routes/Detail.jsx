@@ -54,7 +54,7 @@ const Detail = () => (
       </Grid>
       <Grid item container xs={12} sm={4} sx={{ padding: '5%' }}>
         {details.map(detail => (
-          <Grid item xs={12}>
+          <Grid item xs={12} key={detail.id}>
             <Popis {...detail} />
           </Grid>
         ))}
