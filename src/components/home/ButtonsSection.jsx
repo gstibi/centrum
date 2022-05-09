@@ -28,7 +28,7 @@ const ButtonsSection = () => {
     >
       <Grid item xs={12} sm={3}>
         <Link
-          to={pages[0].url}
+          to="/"
           className={classes.link}
           onClick={() => scrollToElement(pages[3].id)}
         >
@@ -39,7 +39,7 @@ const ButtonsSection = () => {
       </Grid>
       <Grid item xs={12} sm={3}>
         <Link
-          to={pages[1].url}
+          to="/"
           className={classes.link}
           onClick={() => scrollToElement(pages[1].id)}
         >

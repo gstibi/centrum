@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
               <Link
-                to="/home"
+                to="/"
                 onClick={() => {
                   scrollToElement('home');
                 }}
@@ -103,7 +103,7 @@ const ResponsiveAppBar = () => {
                 {pages.map(({ name, id }) => (
                   <MenuItem key={id} onClick={handleCloseNavMenu}>
                     <Link
-                      to={`/${id}`}
+                      to="/"
                       onClick={() => {
                         scrollToElement(id);
                       }}
@@ -122,7 +122,7 @@ const ResponsiveAppBar = () => {
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
               <Link
-                to="/home"
+                to="/"
                 onClick={() => {
                   scrollToElement('home');
                 }}
@@ -145,7 +145,7 @@ const ResponsiveAppBar = () => {
               {pages.map(({ name, id }) => (
                 <Link
                   key={id}
-                  to={`/${id}`}
+                  to="/"
                   onClick={() => {
                     scrollToElement(id);
                   }}

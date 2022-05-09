@@ -33,7 +33,7 @@ const Pomoc = () => (
           <Typography variant="body1">
             Prispejte symbolickou "tehličkou" či "železobetónom". Vyplňte tento
             <span>
-              <Link href="/home"> formulár </Link>
+              <Link href="/"> formulár </Link>
             </span>
             a my vám zašleme tehličku v podobe magnetky podľa vášho výberu.
           </Typography>
