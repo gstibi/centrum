@@ -9,7 +9,9 @@ import {
   Container,
   Button,
   MenuItem,
+  Link as MaterialLink,
 } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
@@ -113,6 +115,17 @@ const ResponsiveAppBar = () => {
                     </Link>
                   </MenuItem>
                 ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <MaterialLink
+                    href="https://domcek.org"
+                    className={classes.link}
+                  >
+                    <Typography alignContent="center" display="flex">
+                      <Typography component="span">Domcek</Typography>
+                      <OpenInNewIcon fontSize="small" sx={{ pl: 1 }} />
+                    </Typography>
+                  </MaterialLink>
+                </MenuItem>
               </Menu>
             </Box>
             <Typography
@@ -154,12 +167,29 @@ const ResponsiveAppBar = () => {
                   <Button
                     key={id}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{ my: 2, color: 'white', display: 'block', pr: 2 }}
                   >
                     <Typography>{name}</Typography>
                   </Button>
                 </Link>
               ))}
+              <MaterialLink href="https://domcek.org" className={classes.link}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, display: 'block' }}
+                  variant="outlined"
+                  color="externalLink"
+                >
+                  <Typography
+                    alignContent="center"
+                    display="flex"
+                    color="white"
+                  >
+                    <Typography component="span">Domček</Typography>
+                    <OpenInNewIcon fontSize="small" sx={{ pl: 1 }} />
+                  </Typography>
+                </Button>
+              </MaterialLink>
             </Box>
           </Toolbar>
         </Container>

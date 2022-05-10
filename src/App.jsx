@@ -22,6 +22,14 @@ const theme = createTheme({
     secondary: {
       main: '#2479AD',
     },
+    externalLink: {
+      main: '#FFFFFF',
+    },
+  },
+  typography: {
+    h6: {
+      fontWeight: 'bold',
+    },
   },
 });
 

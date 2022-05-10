@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable arrow-body-style */
 import * as React from 'react';
 import {
