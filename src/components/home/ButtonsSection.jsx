@@ -33,7 +33,7 @@ const ButtonsSection = () => {
           onClick={() => scrollToElement(pages[3].id)}
         >
           <Button variant="contained" fullWidth>
-            Podporiť
+            {pages[3].name}
           </Button>
         </Link>
       </Grid>
