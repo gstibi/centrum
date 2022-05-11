@@ -1,5 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Typography, Box, Link, ImageList, ImageListItem } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Link as MaterialLink,
+  ImageList,
+  ImageListItem,
+} from '@mui/material';
 import React from 'react';
 import tehlicka1 from '../../assets/images/20€tehlicka1.webp';
 import tehlicka2 from '../../assets/images/200€zaklady1.webp';
@@ -21,14 +27,14 @@ const Tehlicka = () => (
     <Typography variant="body1">
       Prispejte symbolickou "tehličkou" či "železobetónom". Vyplňte tento
       <span>
-        <Link href="https://forms.gle/ttiDLYUAX7CNHweq6" target="blank">
+        <MaterialLink href="https://forms.gle/ttiDLYUAX7CNHweq6" target="blank">
           <Typography component="span"> formulár </Typography>
-        </Link>
+        </MaterialLink>
       </span>
       a my vám po zaslaní finančného daru a vyplnení formuláru zašleme tehličku
       v podobe magnetky podľa vášho výberu (20€, 50€, 100€ alebo 200€ ).
     </Typography>
-    <Link href="https://forms.gle/ttiDLYUAX7CNHweq6" target="blank">
+    <MaterialLink href="https://forms.gle/ttiDLYUAX7CNHweq6" target="blank">
       <ImageList cols={4} variant="quilted">
         <ImageListItem cols={3} rows={3}>
           <img src={tehlicka3} alt="magnetka" loading="lazy" />
@@ -43,7 +49,7 @@ const Tehlicka = () => (
           <img src={tehlicka4} alt="magnetka" loading="lazy" />
         </ImageListItem>
       </ImageList>
-    </Link>
+    </MaterialLink>
   </>
 );
 

@@ -27,6 +27,7 @@ const Aktualita = ({ image, title, short }) => {
         <a
           href="https://domcek.org/news-list/latest"
           style={{ textDecoration: 'none' }}
+          target="blank"
         >
           <Button size="small">Prejsť na novinky</Button>
         </a>

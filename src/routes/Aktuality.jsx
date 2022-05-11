@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Aktualita from '../components/aktuality/Aktualita';
 import NazovSekcie from '../components/NazovSekcie';
@@ -34,7 +34,7 @@ const Aktuality = () => {
   return (
     <Box id="aktuality" sx={{ paddingBottom: 5 }}>
       <NazovSekcie nazov="Aktuality" />
-      {loading && <Typography>Loading ...</Typography>}
+      {loading && <CircularProgress color="primary" />}
       {error && <Typography>Novinky sa nedajú načítať.</Typography>}
       {data && (
         <Grid container spacing={3} direction="row" justifyContent="center">
