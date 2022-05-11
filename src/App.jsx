@@ -13,6 +13,7 @@ import Preco from './routes/Preco';
 import Detail from './routes/Detail';
 import Pomoc from './routes/Pomoc';
 import Aktuality from './routes/Aktuality';
+import Footer from './routes/Footer';
 
 const theme = createTheme({
   palette: {
@@ -45,6 +46,7 @@ const App = () => (
           <Pomoc />
           <Aktuality />
         </Container>
+        <Footer />
       </BrowserRouter>
     </StyledEngineProvider>
   </ThemeProvider>
