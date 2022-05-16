@@ -37,9 +37,7 @@ const ResponsiveAppBar = () => {
   };
 
   useEffect(() => {
-    const url = window.location.href.split('/');
-    const target = url[url.length - 1].toLowerCase();
-    scrollToElement(target === '' ? 'home' : target);
+    scrollToElement('home');
   }, []);
 
   return (

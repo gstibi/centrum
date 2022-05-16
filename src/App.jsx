@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
 import './App.css';
 import { Container } from '@mui/material';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {
   StyledEngineProvider,
   createTheme,
@@ -38,15 +39,24 @@ const App = () => (
   <ThemeProvider theme={theme}>
     <StyledEngineProvider>
       <BrowserRouter>
-        <ResponsiveAppBar />
-        <Home />
-        <Container>
-          <Preco />
-          <Detail />
-          <Pomoc />
-          <Aktuality />
-        </Container>
-        <Footer />
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <>
+                <ResponsiveAppBar />
+                <Home />
+                <Container>
+                  <Preco />
+                  <Detail />
+                  <Pomoc />
+                  <Aktuality />
+                </Container>
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
       </BrowserRouter>
     </StyledEngineProvider>
   </ThemeProvider>
