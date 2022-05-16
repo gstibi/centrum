@@ -41,7 +41,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route
-            path="/*"
+            path="*"
             element={
               <>
                 <ResponsiveAppBar />
