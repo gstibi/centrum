@@ -45,6 +45,31 @@ const Aktuality = () => {
           ))}
         </Grid>
       )}
+      <Grid container spacing={3} direction="row" padding={3}>
+        <Grid item xs={12} sm={6} display="flex" justifyContent="center">
+          <iframe
+            width="100%"
+            height="305"
+            src="https://www.youtube.com/embed/0sfzUwWDHU8"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} display="flex" justifyContent="center">
+          <div
+            className="fb-page"
+            data-tabs="timeline"
+            data-href="https://www.facebook.com/domankykolesarovej"
+            data-width=""
+            data-height="305"
+            data-hide-cover="false"
+            data-show-facepile="false"
+            data-small-header="true"
+          />
+        </Grid>
+      </Grid>
     </Box>
   );
 };
