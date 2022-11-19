@@ -24,7 +24,7 @@ const Preco = () => (
         <iframe
           width="100%"
           height="305"
-          src="https://www.youtube.com/embed/UqjZ8hSygPc"
+          src="https://www.youtube.com/embed/videoseries?list=PLMLfUrq3La3EMgAvquNie76S6ujCpNrMJ"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
