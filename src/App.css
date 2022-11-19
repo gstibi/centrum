@@ -1,1 +1,8 @@
 /* external css: flickity.css */
+
+.carousel-cell {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  background: #444;
+}
