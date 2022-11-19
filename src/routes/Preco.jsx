@@ -27,7 +27,6 @@ const Preco = () => (
           src="https://www.youtube.com/embed/videoseries?list=PLMLfUrq3La3EMgAvquNie76S6ujCpNrMJ"
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </Grid>
