@@ -11,12 +11,6 @@ import ButtonsSection from '../components/home/ButtonsSection';
 
 const useStyles = makeStyles(() => ({
   carousel: { height: '66vh' },
-  carouselCell: {
-    width: '100%',
-    height: '100%',
-    marginRight: '10px',
-    background: '#444',
-  },
   carouselCellImage: {
     objectFit: 'cover',
     height: '100%',
@@ -36,7 +30,7 @@ const useStyles = makeStyles(() => ({
 const flickityOptions = {
   wrapAround: true,
   autoPlay: 1500,
-  cellSelector: '.makeStyles-carouselCell-3',
+  cellSelector: '.carousel-cell',
   pageDots: false,
 };
 
@@ -57,19 +51,19 @@ const Home = () => {
           <ButtonsSection />
         </div>
 
-        <div className={classes.carouselCell}>
+        <div className="carousel-cell">
           <img src={header1} alt="" className={classes.carouselCellImage} />
         </div>
-        <div className={classes.carouselCell}>
+        <div className="carousel-cell">
           <img src={header2} alt="" className={classes.carouselCellImage} />
         </div>
-        <div className={classes.carouselCell}>
+        <div className="carousel-cell">
           <img src={header3} alt="" className={classes.carouselCellImage} />
         </div>
-        <div className={classes.carouselCell}>
+        <div className="carousel-cell">
           <img src={header4} alt="" className={classes.carouselCellImage} />
         </div>
-        <div className={classes.carouselCell}>
+        <div className="carousel-cell">
           <img src={header5} alt="" className={classes.carouselCellImage} />
         </div>
       </Flickity>
