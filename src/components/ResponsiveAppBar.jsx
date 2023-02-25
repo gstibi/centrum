@@ -150,7 +150,7 @@ const ResponsiveAppBar = () => {
               sx={{
                 flexGrow: 1,
                 display: { xs: 'none', md: 'flex' },
-                justifyContent: 'center',
+                justifyContent: 'flex-end',
               }}
             >
               {pages.map(({ name, id }) => (
