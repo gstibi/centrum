@@ -31,7 +31,7 @@ const CustomisedConnector = styled(StepConnector)(({ theme }) => ({
 }));
 
 const Steps = () => (
-  <Box sx={{ width: '100%' }}>
+  <Box sx={{ width: '100%', paddingTop: '3%' }}>
     <Stepper activeStep={2} alternativeLabel connector={<CustomisedConnector />}>
       {steps.map(label => (
         <Step key={label}>
