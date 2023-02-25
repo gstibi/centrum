@@ -3,7 +3,7 @@
 ## How to start
 
 ### Installation
-`npm i`
+`yarn install`
 `npm start`
 
 ### Extensions
