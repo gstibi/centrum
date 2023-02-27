@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const Popis = ({ nadpis, body, farba }) => (
-  <Box item xs={12}>
+  <Box xs={12}>
     <Box
       sx={{
         width: '100%',
