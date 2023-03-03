@@ -32,10 +32,7 @@ const theme = createTheme({
     h6: {
       fontWeight: 'bold',
     },
-    fontFamily: [
-      '"Signika Negative"',
-      '"sans-serif"',
-    ].join(','),
+    fontFamily: ['"Signika Negative"', '"sans-serif"'].join(','),
   },
 });
 

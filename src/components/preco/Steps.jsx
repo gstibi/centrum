@@ -1,5 +1,7 @@
 import { Box, Stepper, Step, StepLabel } from '@mui/material';
-import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+import StepConnector, {
+  stepConnectorClasses,
+} from '@mui/material/StepConnector';
 import { styled } from '@mui/material/styles';
 import React from 'react';
 
@@ -32,7 +34,11 @@ const CustomisedConnector = styled(StepConnector)(({ theme }) => ({
 
 const Steps = () => (
   <Box sx={{ width: '100%', paddingTop: '3%' }}>
-    <Stepper activeStep={2} alternativeLabel connector={<CustomisedConnector />}>
+    <Stepper
+      activeStep={2}
+      alternativeLabel
+      connector={<CustomisedConnector />}
+    >
       {steps.map(label => (
         <Step key={label}>
           <StepLabel>{label}</StepLabel>
