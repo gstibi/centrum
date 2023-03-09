@@ -15,6 +15,7 @@ export const getRoutesAndIds = () => {
     { name: 'Prečo centrum', id: 'preco' },
     { name: 'Detaily stavby', id: 'detail' },
     { name: 'Chcem prispieť', id: 'pomoc' },
+    { name: 'Podporili nás', id: 'podporili' },
     { name: 'Aktuality', id: 'aktuality' },
   ];
 
