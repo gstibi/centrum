@@ -2,42 +2,33 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Flickity from 'react-flickity-component';
 import { makeStyles } from '@mui/styles';
-import ButtonsSection from '../components/home/ButtonsSection';
-import { getImagesFromFolder } from '../components/utils/getImagesFromFolder';
+import { getImagesFromFolder } from '../utils/getImagesFromFolder';
 
-const folderContext = require.context('../assets/images/homeCarouselImages', false, /\.(png|jpe?g|svg|webp)$/);
+const folderContext = require.context('../../assets/images/photoReel', false, /\.(png|jpe?g|svg|webp)$/);
 const images = getImagesFromFolder(folderContext);
 
 const useStyles = makeStyles(() => ({
-  carousel: { height: '66vh' },
+  carousel: { height: '100px' },
   carouselCellImage: {
     objectFit: 'cover',
-    height: '100%',
-    width: '100%',
+    width: '20%',
     margin: '0 auto',
-  },
-  staticBanner: {
-    position: 'absolute',
-    zIndex: 1,
-    width: 'maxContent',
-    bottom: '1vh',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
   },
 }));
 
 const flickityOptions = {
   wrapAround: true,
-  autoPlay: 1500,
+  autoPlay: 3000,
   cellSelector: '.carousel-cell',
   pageDots: false,
+  groupCells: true,
 };
 
-const Home = () => {
+const PhotoReel = () => {
   const classes = useStyles();
 
   return (
-    <Box id="home">
+    <Box sx={{ margin: '3% 0 0 0' }}>
       <Flickity
         className={classes.carousel} // default ''
         elementType="div" // default 'div'
@@ -46,18 +37,18 @@ const Home = () => {
         reloadOnUpdate // default false
         static // default false
       >
-        <div className={classes.staticBanner}>
-          <ButtonsSection />
-        </div>
 
         {images.map(image => (
-          <div key={image} className="carousel-cell">
-            <img src={image} alt="" className={classes.carouselCellImage} />
-          </div>
+          <img
+            src={image}
+            key={image}
+            alt=""
+            className={`carousel-cell ${classes.carouselCellImage}`}
+          />
         ))}
       </Flickity>
     </Box>
   );
 };
 
-export default Home;
+export default PhotoReel;
