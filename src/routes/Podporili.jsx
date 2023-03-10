@@ -4,7 +4,7 @@ import NazovSekcie from '../components/NazovSekcie';
 
 const Podporili = () => (
   <Box id="podporili">
-    <NazovSekcie nazov="Podporili nás" />
+    <NazovSekcie nazov="Pomohli nám" />
     <p>
       Výstavba centra pre mládež je „Realizovaná s finančnou podporou
       predsedu vlády Slovenskej republiky“.
