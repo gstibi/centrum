@@ -16,6 +16,7 @@ import Pomoc from './routes/Pomoc';
 import Aktuality from './routes/Aktuality';
 import Footer from './routes/Footer';
 import Podporili from './routes/Podporili';
+import PhotoReel from './components/PhotoReel';
 
 const theme = createTheme({
   palette: {
@@ -50,6 +51,9 @@ const App = () => (
                 <Home />
                 <Container>
                   <Preco />
+                </Container>
+                <PhotoReel />
+                <Container>
                   <Detail />
                   <Pomoc />
                   <Podporili />

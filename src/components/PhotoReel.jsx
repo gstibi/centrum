@@ -2,13 +2,13 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Flickity from 'react-flickity-component';
 import { makeStyles } from '@mui/styles';
-import { getImagesFromFolder } from '../utils/getImagesFromFolder';
+import { getImagesFromFolder } from './utils/getImagesFromFolder';
 
-const folderContext = require.context('../../assets/images/photoReel', false, /\.(png|jpe?g|svg|webp)$/);
+const folderContext = require.context('../assets/images/photoReel', false, /\.(png|jpe?g|svg|webp)$/);
 const images = getImagesFromFolder(folderContext);
 
 const useStyles = makeStyles(() => ({
-  carousel: { height: '100px' },
+  carousel: { height: '150px' },
   carouselCellImage: {
     objectFit: 'cover',
     width: '20%',
