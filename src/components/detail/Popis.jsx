@@ -1,29 +1,22 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import PropTypes from 'prop-types';
+import CircleIcon from '@mui/icons-material/Circle';
 
-const Popis = ({ nadpis, body, farba }) => (
-  <Box xs={12}>
-    <Box
-      sx={{
-        width: '100%',
-        height: '10px',
-        backgroundColor: farba,
-        display: 'inline-block',
-        opacity: '0.5',
-      }}
-    />
-    <Typography variant="h6">{nadpis}</Typography>
-    <ul>
-      {body.map(bod => (
-        <li key={bod}>{bod}</li>
-      ))}
-    </ul>
-  </Box>
+const Popis = ({ body, farba }) => (
+  <List>
+    {body.map(bod => (
+      <ListItem key={bod}>
+        <ListItemIcon>
+          <CircleIcon fontSize="small" sx={{ color: farba }} />
+        </ListItemIcon>
+        <ListItemText primary={bod} />
+      </ListItem>
+    ))}
+  </List>
 );
 
 Popis.propTypes = {
-  nadpis: PropTypes.string.isRequired,
   body: PropTypes.arrayOf(PropTypes.string).isRequired,
   farba: PropTypes.string.isRequired,
 };
