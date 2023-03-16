@@ -18,7 +18,7 @@
     "react-flickity-component": "^4.0.4",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^3.1.1"
+    "web-vitals": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
