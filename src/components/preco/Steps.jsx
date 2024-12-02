@@ -6,10 +6,10 @@ import { styled } from '@mui/material/styles';
 import React from 'react';
 
 const steps = [
-  'Príprava terénu a základov',
-  'Hrubá stavba',
-  'Strecha',
-  'Uloženie okien a dverí',
+  'Príprava terénu a základov\nHrubá stavba',
+  'Strecha\nUloženie okien a dverí\n',
+  'Kúrenie a rekuperácia',
+  'Zateplenie fasády',
   '>>>',
 ];
 
@@ -30,18 +30,21 @@ const CustomisedConnector = styled(StepConnector)(({ theme }) => ({
     backgroundColor: theme.palette.grey[500],
     borderRadius: 1,
   },
+  [`& .${stepConnectorClasses.alternativeLabel}`]: {
+    'white-space': 'pre-wrap',
+  },
 }));
 
 const Steps = () => (
   <Box sx={{ width: '100%', paddingTop: '3%' }}>
     <Stepper
-      activeStep={2}
+      activeStep={3}
       alternativeLabel
       connector={<CustomisedConnector />}
     >
       {steps.map(label => (
         <Step key={label}>
-          <StepLabel>{label}</StepLabel>
+          <StepLabel sx={{ 'white-space': 'pre-wrap' }}>{label}</StepLabel>
         </Step>
       ))}
     </Stepper>
